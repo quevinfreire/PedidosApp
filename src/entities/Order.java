@@ -71,8 +71,13 @@ public class Order {
 		StringBuilder sb = new StringBuilder();
 		sb.append("ORDER SUMMARY: \n");
 		sb.append("Order moment: " + sdf.format(moment) + "\n");
-		sb.append("Order status: " + status);
-		
+		sb.append("Order status: " + status + "\n");
+		sb.append(client + "\n");
+		sb.append("Order items:\n");
+		for (OrderItem i : item) {
+			sb.append(i + "\n");
+		}
+		sb.append("Total price: $" + String.format("%.2f", total()));
 		
 		return sb.toString();
 				

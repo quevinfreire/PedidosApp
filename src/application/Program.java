@@ -35,11 +35,12 @@ public class Program {
 	
 	Order order = new Order(new Date(), status, client);
 	
-	System.out.println("How many items to this order? ");
+	System.out.print("How many items to this order? ");
 	int n = sc.nextInt();
 	for(int i=0; i<n;i++) {
-		System.out.println("Enter #" + (i+1) +"1 item data:");
+		System.out.println("Enter #" + (i+1) + " item data:");
 		System.out.print("Product name: ");
+		sc.nextLine();
 		String productName = sc.nextLine();
 		System.out.print("Product price: ");
 		Double productPrice = sc.nextDouble();
